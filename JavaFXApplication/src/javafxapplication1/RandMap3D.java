@@ -28,7 +28,7 @@ public class RandMap3D extends TriangleMesh{
         this.getTexCoords().addAll(texC);
         this.getFaces().addAll(2,50,1,50,0,50,1,50,2,50,3,50);
         maxhight = Math.sqrt(((sx*sx)+(sy*sy)+(ex*ex)+(ey*ey))/4)/10;
-        addNest(4);
+        addNest(3);
     }
     public void addNest(int nest){
         if(nest > 0)
