@@ -8,10 +8,8 @@ package javafxapplication1;
 import javafx.application.Application;
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.AmbientLight;
 import javafx.scene.Group;
-import javafx.scene.Parent;
 import javafx.scene.PerspectiveCamera;
 import javafx.scene.PointLight;
 import javafx.scene.Scene;
@@ -20,7 +18,6 @@ import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.PhongMaterial;
 import javafx.scene.shape.MeshView;
-import javafx.scene.shape.TriangleMesh;
 import javafx.scene.transform.Rotate;
 import javafx.stage.Stage;
 
@@ -134,31 +131,31 @@ public class JavaFXApplication1 extends Application {
     public static void main(String[] args) {
         launch(args);
     }
- 
-    private class MyMesh extends TriangleMesh {
- 
-        MyMesh(float w, float h, float d) {
- 
-            this.getPoints().addAll(
-                    0, 0, 0,      // Top
-                    -w / 2, h, 0, // Bottom Left
-                    w / 2, h, 0   // Bottom Right                   
-            );
- 
-            this.getTexCoords().addAll(
-                    1 / 2f, 0,                   // idx 0
-                    0, (float) Math.sqrt(3) / 2, // idx 1
-                    1, (float) Math.sqrt(3) / 2  // idx 2
-            );
- 
-            this.getFaces().addAll(
-                    0, 0, 1, 1, 2, 2,
-                    2, 2, 1, 1, 0, 0
-            );
- 
-        }
- 
-    }
+// 
+//    private class MyMesh extends TriangleMesh {
+// 
+//        MyMesh(float w, float h, float d) {
+// 
+//            this.getPoints().addAll(
+//                    0, 0, 0,      // Top
+//                    -w / 2, h, 0, // Bottom Left
+//                    w / 2, h, 0   // Bottom Right                   
+//            );
+// 
+//            this.getTexCoords().addAll(
+//                    1 / 2f, 0,                   // idx 0
+//                    0, (float) Math.sqrt(3) / 2, // idx 1
+//                    1, (float) Math.sqrt(3) / 2  // idx 2
+//            );
+// 
+//            this.getFaces().addAll(
+//                    0, 0, 1, 1, 2, 2,
+//                    2, 2, 1, 1, 0, 0
+//            );
+// 
+//        }
+// 
+//    }
 //    /**
 //     * @param args the command line arguments
 //     */

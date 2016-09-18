@@ -5,10 +5,7 @@
 */
 package javafxapplication1;
 
-import java.util.ArrayList;
 import java.util.Random;
-import javafx.collections.ObservableIntegerArray;
-import javafx.scene.shape.ObservableFaceArray;
 import javafx.scene.shape.TriangleMesh;
 
 /**
@@ -39,12 +36,12 @@ public class RandMap3D extends TriangleMesh{
                 " point " + this.getPointElementSize()+
                 " texco " + this.getTexCoordElementSize()+
                 " facee " + this.getFaceElementSize());
-        this.getFaces().clear();
         int triElem = 3;
         int dimElem = this.getPointElementSize();
         int texElem = this.getTexCoordElementSize();
         int faceElem = this.getFaceElementSize();
         int Elem = this.getNormalElementSize();
+        this.getFaces().clear();
         for(int cnt = 0;cnt < (int)(facecopy.length/faceElem);cnt++){
             float[] facepoints = new float[triElem*dimElem];
             float[] newpoint;
